@@ -64,6 +64,10 @@
   background-color: var(--color-primary);
 }
 
+.about__info-container {
+  padding-bottom: 20px;
+}
+
 .about__title-container {
   width: 100%;
   position: relative;
@@ -97,9 +101,13 @@
   opacity: 0.8;
 }
 
-.about__info-container {
-  width: 100%;
-  padding: 0 15px;
+.about__container {
+  margin: 0 auto;
+  padding: 0 24px 20px 24px;
+  font-family: var(--font-text);
+  font-size: 1.6rem;
+  color: var(--color-white);
+  line-height: 32px;
 }
 
 .about__img-container {
@@ -109,9 +117,116 @@
 
 .about__img {
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
 }
 
+.about__text {
+  margin-bottom: 25px;
+}
+
+.about__list-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.about__list {
+  list-style-type: none;
+  padding: 0;
+}
+.about__item {
+  padding-bottom: 21px;
+}
+.about__list h6 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.about__list span {
+  height: 19px;
+  margin-bottom: 7px;
+  display: block;
+  text-transform: capitalize;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.about__cv {
+  min-width: 270px;
+  width: 100%;
+}
+.about__mybutton {
+  background-color: #ffb400;
+  border-radius: 26px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 7px 33px;
+  margin: 15px 0 35px 0;
+  text-decoration: none;
+}
+
+.about__mybutton span i {
+  padding-right: 11px;
+}
+
+.separator {
+  width: 100%;
+}
+
+.separator-hr {
+  margin: 0 12px 50px;
+  box-sizing: content-box;
+  border: 1px solid #4c4c4c;
+}
+
+.about__title-eduaction {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.about__eduaction-item {
+  padding-bottom: 50px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.about__eduaction-header {
+  padding: 32px 0 10px;
+}
+
+.about__eduaction-year {
+  position: absolute;
+  top: -2px;
+  font-size: 1.3rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.about__education-degree {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.about__education-separator {
+  display: inline-block;
+  width: 10px;
+  background: #555;
+  height: 2px;
+  margin: 0 7px 3px 7px;
+  vertical-align: middle;
+}
+.about__educations-university {
+  font-weight: 600;
+}
+
+.about__eduaction-year i {
+  color: var(--color-secondary);
+  padding-right: 10px;
+}
+.about__education-body {
+  font-size: 1.4rem;
+}
 @media (min-width: 578px) {
   .nav__list {
     width: 95%;
