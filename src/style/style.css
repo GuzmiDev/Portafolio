@@ -57,9 +57,14 @@
   font-size: 2.8rem;
 }
 
+.home {
+  display: none;
+}
+
 /* ABOUT */
 
-.about {
+.about,
+.work {
   width: 100%;
   background-color: var(--color-primary);
 }
@@ -75,20 +80,24 @@
   padding: 55px 0 49px;
 }
 
-.about__title {
+.about__title,
+.portafolio__title {
   font-family: var(--font);
   text-transform: uppercase;
   font-size: 3.5rem;
   font-weight: 900;
   color: var(--color-white);
   padding: 0 24px;
+  text-align: center;
 }
 
-.about__title span {
+.about__title span,
+.portafolio__title span {
   color: var(--color-secondary);
 }
 
-.about__subtitle {
+.about__subtitle,
+.portafolio__subtitle {
   display: inline-block;
   margin: 20px 0 0;
   padding: 0 24px;
@@ -99,6 +108,7 @@
   line-height: 1.5;
   color: var(--color-white);
   opacity: 0.8;
+  text-align: center;
 }
 
 .about__container {
@@ -244,6 +254,56 @@
   }
 }
 
+/* WORK */
+
+.portafolio {
+  padding: 48px 0;
+}
+
+.portafolio__projects {
+  padding: 0;
+  margin: 0;
+}
+.portafolio__project {
+  padding: 0 20px;
+  margin-bottom: 24px;
+}
+
+.portafolio__thumbnail {
+  position: relative;
+  display: block;
+}
+.portafolio__thumbnail:hover > div {
+  opacity: 1;
+}
+.portafolio__thumbnail div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  top: 0;
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+
+.portafolio__thumbnail div span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.portafolio__img {
+  border-radius: 4px;
+  position: relative;
+}
+
+/* RESPONMSIVO------------------------------------------------- */
 @media (min-width: 578px) {
   .nav__list {
     width: 95%;
@@ -317,6 +377,54 @@
 
 /* Responsive 1025 */
 @media (min-width: 1025px) {
+  .home {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/home_Picture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .home__text-container {
+    margin-left: 50vw;
+    max-width: 550px;
+  }
+
+  .home__text {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100vh;
+    color: var(--color-white);
+  }
+
+  .home__text h3 {
+    font-weight: 400;
+    font-size: 1.9rem;
+    font-family: var(--font-text);
+    text-transform: uppercase;
+  }
+
+  .home__text h1 {
+    font-size: 4.2rem;
+    line-height: 42px;
+    font-weight: 500;
+    margin: 19px 0 10px;
+    white-space: nowrap;
+    position: relative;
+  }
+  .home__text h1 span {
+    color: var(--color-secondary);
+  }
+
+  .home__text p {
+    margin: 11px 0 23px;
+    font-size: 1.6rem;
+    line-height: 32px;
+    font-weight: 400;
+    font-family: var(--font-text);
+  }
+
   .about__info-container {
     display: flex;
     align-items: center;
@@ -389,5 +497,8 @@
     left: -25px;
     margin-top: 7px;
     z-index: 1;
+  }
+  .portafolio__thumbnail div span {
+    font-size: 5rem;
   }
 }

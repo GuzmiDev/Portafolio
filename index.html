@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erick Guzman</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +29,25 @@
     <link rel="stylesheet" href="src/style/font-awesome.min.css" />
   </head>
   <body>
+    <section class="home">
+      <div class="home__text-container">
+        <div class="home__text">
+          <h3>Hi there !</h3>
+          <h1>I'M <span>ERICK GUZMAN</span></h1>
+          <p>
+            I'm a Freelance UI/UX Designer and Developer based in London,
+            England. I strives to build immersive and beautiful web applications
+            through carefully crafted code and user-centric design.
+          </p>
+          <a href="#about" class="about__mybutton"
+            ><span
+              ><i class="fa fa-download" aria-hidden="true"></i>More about
+              me</span
+            ></a
+          >
+        </div>
+      </div>
+    </section>
     <section class="about" id="about">
       <div class="about__title-container">
         <h2 class="about__title">About <span>Me</span></h2>
@@ -33,7 +58,7 @@
       <div class="about__container">
         <div class="about__info-container">
           <figure class="about__img-container">
-            <img src="src/images/dark-about.jpg" alt="" class="about__img" />
+            <img src="src/images/1630039157633.jpg" alt="" class="about__img" />
           </figure>
           <p class="about__text">
             I'm a Freelance UI/UX Designer and Developer based in London,
@@ -106,7 +131,7 @@
               <div class="about__education-header">
                 <span class="about__education-year"
                   ><i class="fa fa-caret-right"></i
-                  ><i class="fa fa-calendar"></i>2019 - Present</span
+                  ><i class="fa fa-calendar"></i>2017 - Present</span
                 >
                 <span class="about__education-degree"
                   >Platzi
@@ -127,6 +152,72 @@
         </div>
       </div>
     </section>
+    <section class="work" id="work">
+      <div class="portafolio">
+        <div class="portafolio_container text-center">
+          <h2 class="portafolio__title">my <span>portfolio</span></h2>
+          <span class="portafolio__subtitle"
+            >a few recent design and coding projects. Want to see more? Email
+            me.</span
+          >
+        </div>
+      </div>
+      <div class="container">
+        <ul class="row portafolio__projects">
+          <li class="portafolio__project col-12 col-md-6 col-lg-6">
+            <a
+              href="https://app-expense-record-with-react.web.app/"
+              class="portafolio__thumbnail"
+            >
+              <img
+                src="./src/images/project-2.jpg"
+                class="portafolio__img img-fluid"
+                alt=""
+              />
+              <div>
+                <span>Expense Record </span>
+              </div>
+            </a>
+          </li>
+          <li class="portafolio__project col-12 col-md-6 col-lg-6">
+            <a href="" class="portafolio__thumbnail">
+              <img
+                src="./src/images/project-1.jpg"
+                class="portafolio__img img-fluid"
+                alt=""
+              />
+              <div>
+                <span>Expense Record </span>
+              </div></a
+            >
+          </li>
+          <li class="portafolio__project col-12 col-md-6 col-lg-6">
+            <a href="" class="portafolio__thumbnail">
+              <img
+                src="./src/images/project-1.jpg"
+                class="portafolio__img img-fluid"
+                alt=""
+              />
+              <div>
+                <span>Expense Record </span>
+              </div></a
+            >
+          </li>
+          <li class="portafolio__project col-12 col-md-6 col-lg-6">
+            <a href="" class="portafolio__thumbnail">
+              <img
+                src="./src/images/project-1.jpg"
+                class="portafolio__img img-fluid"
+                alt=""
+              />
+              <div>
+                <span>Expense Record </span>
+              </div></a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item">
@@ -136,7 +227,7 @@
           >
         </li>
         <li class="nav__item">
-          <a href="" class="nav__link"
+          <a href="#work" class="nav__link"
             ><i class="fa fa-briefcase" aria-hidden="true"></i
             ><span>My Portfolio</span></a
           >
