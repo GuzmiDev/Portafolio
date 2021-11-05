@@ -1,0 +1,9 @@
+.about__text {
+  display: none;
+}
+.about__list:nth-child(1) {
+  text-align: end;
+}
+.about__cv {
+  text-align: center;
+}
