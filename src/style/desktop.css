@@ -178,15 +178,91 @@ section {
   pointer-events: auto;
   transition: height 0.25s;
 }
+.nav-desktop__trigger span {
+  visibility: visible;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-white);
+  bottom: auto;
+  right: auto;
+  top: 30px;
+  left: 22px;
+}
+.nav-desktop__trigger span::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-white);
+  bottom: auto;
+  right: auto;
+  top: 7px;
+  transform-origin: bottom right;
+  transform: rotate(0deg);
+  transition: transform 0.25s;
+}
+
+.nav-desktop__trigger span::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-white);
+  bottom: auto;
+  right: auto;
+  top: -7px;
+  transform-origin: bottom right;
+  transform: rotate(0deg);
+  transition: transform 0.25s;
+}
+
+.nav-desktop__screw span {
+  background-color: transparent;
+  transition: background-color 0.1s;
+}
+.nav-desktop__screw span::after {
+  visibility: visible;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-white);
+  bottom: auto;
+  right: auto;
+  top: -9px;
+  left: -2px;
+  transform-origin: bottom right;
+  transform: rotate(-45deg);
+  transition: transform top left 0.2s;
+  transition-timing-function: ease;
+}
+.nav-desktop__screw span::before {
+  visibility: visible;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-white);
+  bottom: auto;
+  right: auto;
+  top: 3px;
+  left: -3px;
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+  transition: transform top left 0.2s;
+  transition-timing-function: ease;
+}
+
 .nav-desktop__screw {
-  height: 350px;
+  height: 316px;
   border-radius: 30px;
   transition: height 0.25s;
 }
 .nav-desktop__list {
   /* visibility: hidden; */
   list-style: none;
-  transform: translate(21px, 82px);
+  transform: translate(22px, 65px);
 }
 
 .nav-desktop__item {
@@ -268,4 +344,8 @@ section {
   transform: translate3d(0, 0, 0);
   transition: transform 0.6s ease, -webkit-transform 0.6s ease;
   z-index: 2;
+}
+
+.yellow {
+  color: var(--color-secondary);
 }

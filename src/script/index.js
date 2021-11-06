@@ -15,6 +15,8 @@ const workDesktopBtn = document.querySelector("#workDesktopBtn");
 const contactDesktopBtn = document.querySelector("contactDesktopBtn");
 const blogDesktopBtn = document.querySelector("#blogDesktopBtn");
 
+const aboutMeHomeBtn = document.querySelector(".about__mybutton");
+
 backMobile.addEventListener("click", () => {
   main.classList.toggle("open");
   backMobile.classList.toggle("mostrar");
@@ -40,30 +42,51 @@ navDesktopBtn.addEventListener("click", () => {
 });
 
 aboutDesktopBtn.addEventListener("click", () => {
+  yellowzer(aboutDesktopBtn);
   showSpecificSection(aboutMeSection);
 });
 
 homeDesktopBtn.addEventListener("click", () => {
+  yellowzer(homeDesktopBtn);
   showSpecificSection(homeSection);
 });
 
 workDesktopBtn.addEventListener("click", () => {
+  yellowzer(workDesktopBtn);
   showSpecificSection(workSection);
 });
 
-const showSpecificSection = (sectionToShow) => {
+aboutMeHomeBtn.addEventListener("click", () => {
+  showSpecificSection(aboutMeSection, false);
+});
+
+const showSpecificSection = (sectionToShow, toggleMenu = true) => {
   const listSection = [aboutMeSection, workSection, homeSection];
 
-  navDesktopBtn.classList.toggle("nav-desktop__screw");
-  listNavDesktopItem.forEach((navItem) => {
-    navItem.classList.toggle("nav-desktop__item-show");
-  });
+  if (toggleMenu) {
+    navDesktopBtn.classList.toggle("nav-desktop__screw");
+    listNavDesktopItem.forEach((navItem) => {
+      navItem.classList.toggle("nav-desktop__item-show");
+    });
+  }
 
   listSection.forEach((section) => {
     if (section != sectionToShow) {
       section.classList.remove("active");
     } else {
       section.classList.add("active");
+    }
+  });
+};
+
+const yellowzer = (tagToYellow) => {
+  const listDesktopBtn = [homeDesktopBtn, workDesktopBtn, aboutDesktopBtn];
+
+  listDesktopBtn.forEach((item) => {
+    if (item != tagToYellow) {
+      item.classList.remove("yellow");
+    } else {
+      item.classList.add("yellow");
     }
   });
 };
