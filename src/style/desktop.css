@@ -1,6 +1,23 @@
 .mostrar {
   display: none;
 }
+.main {
+  position: relative;
+  top: -100vh;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  transform: translate3d(100%, 0, 0);
+  transition-delay: 1s;
+}
+
+.home,
+.about,
+.work {
+  display: block;
+}
 
 .home {
   width: 100%;
@@ -10,6 +27,7 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .home__text-container {
   margin-left: 50vw;
   max-width: 550px;
@@ -46,6 +64,10 @@
   line-height: 32px;
   font-weight: 400;
   font-family: var(--font-text);
+}
+
+.about {
+  display: block;
 }
 
 .about__info-container {
@@ -240,4 +262,10 @@
 
 .nav-desktop__thumbnail:hover {
   color: var(--color-secondary);
+}
+
+.active {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  z-index: 2;
 }
