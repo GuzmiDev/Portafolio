@@ -259,11 +259,11 @@ body {
 }
 
 .about__title-education {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  margin-top: 25px;
   text-transform: uppercase;
 }
 .about__education-item {
-  padding-bottom: 50px;
   display: flex;
   position: relative;
   flex-direction: column;
