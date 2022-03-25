@@ -58,6 +58,7 @@ workDesktopBtn.addEventListener("click", () => {
 
 aboutMeHomeBtn.addEventListener("click", () => {
   showSpecificSection(aboutMeSection, false);
+  yellowzer(aboutDesktopBtn);
 });
 
 const showSpecificSection = (sectionToShow, toggleMenu = true) => {

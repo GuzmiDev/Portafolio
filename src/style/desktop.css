@@ -1,3 +1,7 @@
+.nav__list {
+  visibility: hidden;
+}
+
 .mostrar {
   display: none;
 }
